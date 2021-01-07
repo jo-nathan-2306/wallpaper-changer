@@ -4,8 +4,8 @@ import random
 from wallpaper import set_wallpaper
 import threading
 image=[]
-reddit = praw.Reddit(client_id = x', 
-                    client_secret = y, 
+reddit = praw.Reddit(client_id = 'PhST7A4huxJkjQ', 
+                    client_secret = 'T1dyyvg6VChuqOH2vxQZmudIeRKOpA', 
                     user_agent = 'Meme Bot')
 def wall():
     subreddit =reddit.subreddit('CityPorn') 
@@ -17,8 +17,8 @@ def wall():
     val="wall"+str(num)+str(random.randint(1,200))+str(random.randint(1,200))
     memes= random.choice(image)
     meme= requests.get(memes).content
-    open(r"C:\Users\jonat\OneDrive\Pictures\{}.jpg".format(val), 'wb').write(meme)
-    set_wallpaper(r"C:\Users\jonat\OneDrive\Pictures\{}.jpg".format(val))
+    open(r"{}.jpg".format(val), 'wb').write(meme)
+    set_wallpaper(r"{}.jpg".format(val))
     print("done")
     t= threading.Timer(300,wall)
     t.start()
