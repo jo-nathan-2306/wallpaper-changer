@@ -4,8 +4,8 @@ import random
 from wallpaper import set_wallpaper
 import threading
 image=[]
-reddit = praw.Reddit(client_id = 'PhST7A4huxJkjQ', 
-                    client_secret = 'T1dyyvg6VChuqOH2vxQZmudIeRKOpA', 
+reddit = praw.Reddit(client_id = secretid, 
+                    client_secret = secret, 
                     user_agent = 'Meme Bot')
 def wall():
     subreddit =reddit.subreddit('CityPorn') 
